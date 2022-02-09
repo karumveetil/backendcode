@@ -22,6 +22,7 @@ public class LibraryController {
     @GetMapping("/api/books")
     @ResponseStatus(HttpStatus.OK)
     public List<Books> readBooks() {
+	 Collections.sort(bookList);
         return bookList;
     }
 
